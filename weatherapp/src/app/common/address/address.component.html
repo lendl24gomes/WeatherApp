@@ -1,0 +1,25 @@
+<div >
+<div style="text-align:center;" class="divht">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <br>
+      <br>
+      <br>
+      <h2> <b>Welcome to the weather app. </b> </h2>
+      <h2> <b>Here you can find the weather of any City, State or Country</b> </h2>
+      <h2> <b> Please enter a postalcode or a city or country or any correct address.</b> </h2>
+      <h2> <b> And you will get the weather of that place</b> </h2>
+      <input type="text" placeholder="Enter a valid address…" style="width: 500px;" formControlName="address" class="input-medium search-query">
+      <br>
+
+      <!--
+      <input type="text" placeholder="Enter a valid address…" formControlName="address" class="input-medium search-query">
+      <div *ngIf="userForm.controls['address'].hasError('required')">
+          Please enter a valid address
+        </div>-->
+    </div>
+    <br>
+    <button type="submit" [disabled]="!userForm.valid"> Submit</button>
+  </form>
+</div>
+</div>

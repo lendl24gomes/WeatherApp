@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div [ngStyle]="{'background-image': 'url(' + photo + ')'}" >
+  <router-outlet>
+      <div class="pre-bootstrap" *ngIf="loading" >
+      <div class="pre-bootstrap-text">Loading..</div>
+      <div class="pre-bootstrap-spinner"></div>
+    </div>
+  </router-outlet>
+</div>
+<app-footer></app-footer>

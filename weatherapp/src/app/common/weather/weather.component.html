@@ -1,0 +1,22 @@
+<p style="text-align:center;font-weight: bold; font-size:25px" *ngIf="showerror">
+  <br>{{errorMsg}} </p>
+<table *ngIf="showtable" class="table table-striped">
+  <thead>
+  <tr>
+    <th>No.</th>
+    <th>Address</th>
+    <th>Current temp   </th>
+    <th>Feels like</th>
+  </tr>
+  </thead>
+
+  <tr *ngFor="let location of locations; let k = index">
+    <td>{{k+1}}</td>
+    <td>{{location}}</td>
+    <td>{{weathers[k].temperature}}</td>
+    <td>{{weathers[k].apparentTemperature}}</td>
+  </tr>
+
+</table>
+
+<button (click)="goBack()" class="btn btn-inverse fright"> Back</button>
